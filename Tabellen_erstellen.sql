@@ -1,3 +1,5 @@
+USE TierartztPraxis;
+
 CREATE TABLE Personal
 	(Personal_ID INTEGER NOT NULL,
 	Name nvarchar(50),
@@ -106,7 +108,7 @@ ALTER TABLE Behandlung
 
 ALTER TABLE Behandlung
 	ADD CONSTRAINT FK_BehandlungMedikament FOREIGN KEY(Medikament_ID)
-	REFERENCES Medikament(Mediament_ID);
+	REFERENCES Medikament(MEdikament_ID);
 
 ALTER TABLE Termin
 	ADD CONSTRAINT FK_TerminTier FOREIGN KEY(Tier_ID)
