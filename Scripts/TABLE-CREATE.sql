@@ -6,6 +6,7 @@ CREATE TABLE Personal
 	Vorname nvarchar(50),
 	Beruf_ID INTEGER,
 	Geburtsdatum DATE,
+	Aktiv BIT NOT NULL,
 CONSTRAINT PK_Personal PRIMARY KEY(Personal_ID) );
 
 CREATE TABLE Tier
@@ -76,6 +77,7 @@ CREATE TABLE Beruf
 	Name nvarchar(50),
 CONSTRAINT PK_Beruf PRIMARY KEY(Beruf_ID));
 
+GO
 -- Referentielle Integrität:
 
 ALTER TABLE Personal
@@ -88,7 +90,7 @@ ALTER TABLE Tier
 
 ALTER TABLE Tier
 	ADD CONSTRAINT FK_TierBesitzer FOREIGN KEY(Besitzer_ID)
-	REFERENCES Besitzer(Besitzer_ID);
+	REFERENCES Besitzer(Besitzer_ID) ON DELETE CASCADE;
 
 ALTER TABLE Rasse
 	ADD CONSTRAINT FK_RasseTierart FOREIGN KEY(Tierart_ID)
@@ -104,7 +106,7 @@ ALTER TABLE Behandlung
 
 ALTER TABLE Behandlung
 	ADD CONSTRAINT FK_BehandlungTermin FOREIGN KEY(Termin_ID)
-	REFERENCES Termin(Termin_ID);
+	REFERENCES Termin(Termin_ID) ON DELETE CASCADE;
 
 ALTER TABLE Behandlung
 	ADD CONSTRAINT FK_BehandlungMedikament FOREIGN KEY(Medikament_ID)
@@ -112,7 +114,7 @@ ALTER TABLE Behandlung
 
 ALTER TABLE Termin
 	ADD CONSTRAINT FK_TerminTier FOREIGN KEY(Tier_ID)
-	REFERENCES Tier(Tier_ID);
+	REFERENCES Tier(Tier_ID) ON DELETE CASCADE;
 
 ALTER TABLE Termin
 	ADD CONSTRAINT FK_TerminMedikament FOREIGN KEY(Medikament_ID)
