@@ -8,6 +8,6 @@ INSERT INTO Tierart(Tierart) Values ('Hund'), ('Katze'), ('Maus'), ('Kaninchen')
 
 INSERT INTO Rasse(Tierart_ID, Rasse) Values (1, 'Goldenretriever'), (1, 'Bulldoge'), (2, 'Norwegische Waldkatze'), (2, 'Perserkatze'), (2, 'Bengal'), (3, 'Rennmaus'), (3, 'Spitzmaus'), (4, 'Zwergwidder'), (4, 'Riesenkaninchen')
 
-INSERT INTO Besitzer(Name, Vorname, Telefon, Email, Strasse, PLZ, Ort) Values
+INSERT INTO Besitzer(Name, Vorname, Telefon, Email, Strasse, PLZ, Ort) Values ('Streit', 'Michael', 0625338098, 'Michael.Streit@gmail.com', 'Bürgisserstrasse 2', 5000, 'Aarau')
 
 SELECT * FROM Beruf
