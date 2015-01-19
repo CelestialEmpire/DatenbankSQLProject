@@ -39,6 +39,8 @@ INSERT INTO MedikamentGruppe(MedikamentGruppe_ID, GruppeName) Values
 		(1, 'Schmerzmittel'),
 		(2, 'Impfstoff'),
 		(3, 'Antibiotikum');
+		
+INSERT INTO Tier(
 
 
 
