@@ -40,6 +40,15 @@ INSERT INTO MedikamentGruppe(MedikamentGruppe_ID, GruppeName) Values
 		(2, 'Impfstoff'),
 		(3, 'Antibiotikum');
 		
+INSERT INTO Medikament(Name, MedikamentGruppe_ID, Hersteller, Preis, Anzahl) Values
+		('Morphin', 1, 'Roche', 41, 100),
+		('Fentanyl', 1, 'Roche', 20, 15),
+		('Methadon', 1, 'Roche', 35, 76),
+		('Katzenschnupfen', 2, 15, 230),
+		('Panleukopenie', 2, 22, 83),
+		('FeLV', 2, 28, 14),
+		('Glykopeptide', 3, 42, 14)
+		
 INSERT INTO Tier(Tier_ID, Name, Geschlecht, Rasse_ID, Alter, Besitzer_ID) Values 
 		(1, 'Hassi', 'Weiblich', 8, 14, 3),
 		(2, 'Bello', 'Männlich', 1, 3, 5),
@@ -49,7 +58,13 @@ INSERT INTO Tier(Tier_ID, Name, Geschlecht, Rasse_ID, Alter, Besitzer_ID) Values
 		(6, 'Garfield', 'Männlich', 4, 12, 3),
 		(7, 'Tigerli', 'Weblich', 5, 8, 5),
 		(8, 'Schnupfi', 'Weiblich', 9, 9, 1),
-		(9, '
+		(9, 'Mausi', 'Männlich', 6, 2, 2),
+		(10, 'Ändu', 'Männlich', 5, 25, 3);
+
+INSERT INTO Termin(Termin_ID, Tier_ID, Datum, Medikament_ID, Bemerkung) Values
+		(1, 1, '2015-01-05', 
+		
+INSERT INTO Behandlung(Behandlung_ID, Personal_ID, 
 
 
 
