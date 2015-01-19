@@ -40,7 +40,16 @@ INSERT INTO MedikamentGruppe(MedikamentGruppe_ID, GruppeName) Values
 		(2, 'Impfstoff'),
 		(3, 'Antibiotikum');
 		
-INSERT INTO Tier(
+INSERT INTO Tier(Tier_ID, Name, Geschlecht, Rasse_ID, Alter, Besitzer_ID) Values 
+		(1, 'Hassi', 'Weiblich', 8, 14, 3),
+		(2, 'Bello', 'Männlich', 1, 3, 5),
+		(3, 'Cheese', 'Männlich', 7, 5, 1),
+		(4, 'Mopsine', 'Weiblich', 2, 10, 2),
+		(5, 'Pussi', 'Weiblich', 3, 1, 4),
+		(6, 'Garfield', 'Männlich', 4, 12, 3),
+		(7, 'Tigerli', 'Weblich', 5, 8, 5),
+		(8, 'Schnupfi', 'Weiblich', 9, 9, 1),
+		(9, '
 
 
 
