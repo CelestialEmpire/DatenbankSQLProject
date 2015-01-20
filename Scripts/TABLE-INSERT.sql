@@ -1,9 +1,12 @@
+---Verbinden von DB
 Use TierartztPraxis;
 
+---Einfügen von Berufen
 INSERT INTO Beruf(Beruf_ID, Name) Values 
 		('1', 'Artzt'), 
 		('2', 'MPA');
 
+---Personal wird eingefügt
 INSERT INTO Personal(Personal_ID,Beruf_ID, Name, Vorname, Geburtsdatum, Aktiv) Values 
 		(1, 2, 'Tanner', 'Sara', '1984-08-02', 1), 
 		(2, 2, 'Staehli', 'Manuela', '1992-09-14', 1), 
@@ -11,12 +14,14 @@ INSERT INTO Personal(Personal_ID,Beruf_ID, Name, Vorname, Geburtsdatum, Aktiv) V
 		(4, 1, 'Nydegger', 'Tobias', '1975-04-08', 1), 
 		(5, 2, 'Kueng', 'Michaela', '1994-02-04', 1);
 
+---Tierarten werden eingefügt
 INSERT INTO Tierart(Tierart_ID, Tierart) Values 
 		(1, 'Hund'), 
 		(2, 'Katze'), 
 		(3, 'Maus'), 
 		(4, 'Kaninchen');
 
+---Rassen werden erstellt
 INSERT INTO Rasse(Rasse_ID,Tierart_ID, Rasse) Values 
 		(1, 1, 'Goldenretriever'), 
 		(2, 1, 'Bulldoge'), 
@@ -28,6 +33,7 @@ INSERT INTO Rasse(Rasse_ID,Tierart_ID, Rasse) Values
 		(8, 4, 'Zwergwidder'), 
 		(9, 4, 'Riesenkaninchen');
 
+---Besitzer werden eingetragen
 INSERT INTO Besitzer(Besitzer_ID, Name, Vorname, Telefon, Email, Strasse, PLZ, Ort) Values 
 		(1, 'Streit', 'Michael', 0625338098, 'Michael.Streit@gmail.com', 'Bürgisserstrasse 2', 5000, 'Aarau'), 
 		(2, 'Kurts', 'Hans', 0623457620, 'Hans.Kurt@gmail.com', 'Weltgangsweg 13', 3006, 'Bern'), 
@@ -35,11 +41,13 @@ INSERT INTO Besitzer(Besitzer_ID, Name, Vorname, Telefon, Email, Strasse, PLZ, O
 		(4, 'Stark', 'Flavio', 0782047712, 'Flavio.Stark@gmx.ch', 'Riedweg 32d', 1203, 'Genf'), 
 		(5, 'Redig', 'Thomas', 0542351234, 'Thomas@Redig.ch', 'Bühlacherstrasse 23', 5001, 'Aarau');
 
+---Medikamenten Gruppen werden eingefügt
 INSERT INTO MedikamentGruppe(MedikamentGruppe_ID, GruppeName) Values
 		(1, 'Schmerzmittel'),
 		(2, 'Impfstoff'),
 		(3, 'Antibiotikum');
-		
+
+---Medikamente werden eingetragen
 INSERT INTO Medikament(Medikament_ID, Name, MedikamentGruppe_ID, Hersteller, Preis, Anzahl) Values
 		(1, 'Morphin', 1, 'Roche', 41, 100),
 		(2, 'Fentanyl', 1, 'Roche', 20, 15),
@@ -50,7 +58,8 @@ INSERT INTO Medikament(Medikament_ID, Name, MedikamentGruppe_ID, Hersteller, Pre
 		(7, 'Glykopeptide', 3, 'Heisenberg', 42, 14),
 		(8, 'Chinolone', 3, 'Heisenberg', 8, 123),
 		(9, 'Sulfonamide', 3, 'Roche', 12, 432);
-		
+
+---Tiere weden eingetragen		
 INSERT INTO Tier(Tier_ID, Name, Geschlecht, Rasse_ID, Alter, Besitzer_ID) Values 
 		(1, 'Hassi', 'Weiblich', 8, 14, 3),
 		(2, 'Bello', 'Männlich', 1, 3, 5),
@@ -63,6 +72,7 @@ INSERT INTO Tier(Tier_ID, Name, Geschlecht, Rasse_ID, Alter, Besitzer_ID) Values
 		(9, 'Mausi', 'Männlich', 6, 2, 2),
 		(10, 'Ändu', 'Männlich', 5, 25, 3);
 
+---Termine werden erstellt
 INSERT INTO Termin(Termin_ID, Tier_ID, Datum, Medikament_ID, Bemerkung) Values
 		(1, 3, '2015-01-05', 1, 'Kastration'),
 		(2, 1, '2015-01-06', 7, 'Hat Fieber'),
@@ -74,7 +84,8 @@ INSERT INTO Termin(Termin_ID, Tier_ID, Datum, Medikament_ID, Bemerkung) Values
 		(8, 8, '2015-01-14', 5, 'Panleukpenie'),
 		(9, 9, '2015-01-15', 9, 'Stark Fieber'),
 		(10, 10, '2015-01-16', 1, 'Innere Blutung');
-		
+
+---Behandlungen werden eingetragen		
 INSERT INTO Behandlung(Behandlung_ID, Personal_ID, Termin_ID, Medikament_ID, Dauer, AbschlussBemerkung, Gewicht) Values
 		(1, 4, 1, 1, '1:30', 'Operation war erfolgreich', 0.200),
 		(2, 1, 2, 7, 
