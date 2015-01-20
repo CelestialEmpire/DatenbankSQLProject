@@ -93,5 +93,6 @@ INSERT INTO Behandlung(Behandlung_ID, Personal_ID, Termin_ID, Medikament_ID, Dau
 
 
 SELECT * From Besitzer;
-hahaa
-lukas
+hahaa	       0
+lukas ---------
+               0
