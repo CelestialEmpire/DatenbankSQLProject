@@ -90,6 +90,6 @@ INSERT INTO Behandlung(Behandlung_ID, Personal_ID, Termin_ID, Medikament_ID, Dau
 		(1, 4, 1, 1, '1:30', 'Operation war erfolgreich', 0.200),
 		(2, 1, 2, 7, '0:20', '
 		
-
+Hallo ich bins Mutti
 
 SELECT * From Besitzer;
