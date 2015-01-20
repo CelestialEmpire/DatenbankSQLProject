@@ -40,14 +40,16 @@ INSERT INTO MedikamentGruppe(MedikamentGruppe_ID, GruppeName) Values
 		(2, 'Impfstoff'),
 		(3, 'Antibiotikum');
 		
-INSERT INTO Medikament(Name, MedikamentGruppe_ID, Hersteller, Preis, Anzahl) Values
-		('Morphin', 1, 'Roche', 41, 100),
-		('Fentanyl', 1, 'Roche', 20, 15),
-		('Methadon', 1, 'Roche', 35, 76),
-		('Katzenschnupfen', 2, 15, 230),
-		('Panleukopenie', 2, 22, 83),
-		('FeLV', 2, 28, 14),
-		('Glykopeptide', 3, 42, 14)
+INSERT INTO Medikament(Medikament_ID, Name, MedikamentGruppe_ID, Hersteller, Preis, Anzahl) Values
+		(1, 'Morphin', 1, 'Roche', 41, 100),
+		(2, 'Fentanyl', 1, 'Roche', 20, 15),
+		(3, 'Methadon', 1, 'Roche', 35, 76),
+		(4, 'Katzenschnupfen', 2, 'Heisenberg', 15, 230),
+		(5, 'Panleukopenie', 2, 'Heisenberg', 22, 83),
+		(6, 'FeLV', 2, 'Heisenberg', 28, 14),
+		(7, 'Glykopeptide', 3, 'Heisenberg', 42, 14),
+		(8, 'Chinolone', 3, 'Heisenberg', 8, 123),
+		(9, 'Sulfonamide', 3, 'Roche', 12, 432);
 		
 INSERT INTO Tier(Tier_ID, Name, Geschlecht, Rasse_ID, Alter, Besitzer_ID) Values 
 		(1, 'Hassi', 'Weiblich', 8, 14, 3),
@@ -62,10 +64,21 @@ INSERT INTO Tier(Tier_ID, Name, Geschlecht, Rasse_ID, Alter, Besitzer_ID) Values
 		(10, 'Ändu', 'Männlich', 5, 25, 3);
 
 INSERT INTO Termin(Termin_ID, Tier_ID, Datum, Medikament_ID, Bemerkung) Values
-		(1, 1, '2015-01-05', 
+		(1, 3, '2015-01-05', 1, 'Kastration'),
+		(2, 1, '2015-01-06', 7, 'Hat Fieber'),
+		(3, 2, '2015-01-10', 2, 'Hat Bein gebrochen'),
+		(4, 4, '2015-01-08', 8, 'Wunde am Fuss'),
+		(5, 5, '2015-01-11', 6, 'FeLV'),
+		(6, 6, '2015-01-13', 3, 'Überfressung'),
+		(7, 7, '2015-01-13', 1, 'Bein amputieren'),
+		(8, 8, '2015-01-14', 5, 'Panleukpenie'),
+		(9, 9, '2015-01-15', 9, 'Stark Fieber'),
+		(10, 10, '2015-01-16', 1, 'Innere Blutung');
 		
-INSERT INTO Behandlung(Behandlung_ID, Personal_ID, 
-
+INSERT INTO Behandlung(Behandlung_ID, Personal_ID, Termin_ID, Medikament_ID, Dauer, AbschlussBemerkung, Gewicht) Values
+		(1, 4, 1, 1, '1:30', 'Operation war erfolgreich', 0.200),
+		(2, 1, 2, 7, 
+		
 
 
 SELECT * From Besitzer;
