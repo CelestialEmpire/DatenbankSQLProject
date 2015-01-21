@@ -88,8 +88,12 @@ INSERT INTO Termin(Termin_ID, Tier_ID, Datum, Medikament_ID, Bemerkung) Values
 ---Behandlungen werden eingetragen		
 INSERT INTO Behandlung(Behandlung_ID, Personal_ID, Termin_ID, Medikament_ID, Dauer, AbschlussBemerkung, Gewicht) Values
 		(1, 4, 1, 1, '1:30', 'Operation war erfolgreich', 0.200),
-		(2, 1, 2, 7, '0:20', '
-		
-
-
-SELECT * From Besitzer;
+		(2, 1, 2, 7, '0:20', 'Antibiotikum wurde gegeben. Fieber sollte sinken', 1.2),
+		(3, 3, 3, 2, '1:20', 'Bein wurde geschient', 15.4),
+		(4, 2, 4, 8, '0:40', 'Wunde gesäubert und verbunden. Antibiotikum wurde vergeben.', 8.2),
+		(5, 5, 5, 6, '0:15', 'Impfung wurde gemacht', 3.8),
+		(6, 1, 6, 3, '0:35', 'Schmerzmittel gegen Bauchschmerzen wurde gegeben', 5.9),
+		(7, 4, 7, 1, '2:34', 'Operation verlief gut. Amputierung hat perfekt geklappt', 4.2),
+		(8, 2, 8, 5, '0:10', 'Impfung wurde getätigt', 6.2),
+		(9, 5, 9, 9, '0:20', 'Antibiotikum wurde gegeben. Fieber sollte sinken', 0.400),
+		(10, 3, 10, 1, '2:50', 'Blutung konnte verlöhtet und gestopt werden', 9.4);
