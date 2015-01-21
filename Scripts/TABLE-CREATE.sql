@@ -33,7 +33,7 @@ CREATE TABLE Besitzer
 	(Besitzer_ID INTEGER NOT NULL,
 	Name nvarchar(50),
 	Vorname nvarchar(50),
-	Telefon INTEGER NOT NULL,
+	Telefon nvarchar(20),
 	Email nvarchar(50),
 	Strasse nvarchar(50),
 	PLZ INTEGER NOT NULL,
