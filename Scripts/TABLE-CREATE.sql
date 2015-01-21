@@ -1,7 +1,7 @@
 USE TierartztPraxis;
 
 CREATE TABLE Personal
-	(Personal_ID INTEGER NOT NULL,
+	(Personal_ID INTEGER identity(1,1) NOT NULL,
 	Name nvarchar(50),
 	Vorname nvarchar(50),
 	Beruf_ID INTEGER,
@@ -10,27 +10,27 @@ CREATE TABLE Personal
 CONSTRAINT PK_Personal PRIMARY KEY(Personal_ID) );
 
 CREATE TABLE Tier
-	(Tier_ID INTEGER NOT NULL,
+	(Tier_ID INTEGER identity(1,1) NOT NULL,
 	Name nvarchar(50),
 	Geschlecht nvarchar(50),
 	Rasse_ID INTEGER NOT NULL,
-	Geburtsdatum DATE NOT NULL,
+	Geburtsdatum int NOT NULL,
 	Besitzer_ID INTEGER NOT NULL,
 CONSTRAINT PK_Tier PRIMARY KEY(Tier_ID));
 
 CREATE TABLE Tierart
-	(Tierart_ID INTEGER NOT NULL,
+	(Tierart_ID INTEGER identity(1,1) NOT NULL,
 	Tierart nvarchar(50),
 CONSTRAINT PK_Tierart PRIMARY KEY(Tierart_ID));
 
 CREATE TABLE Rasse
-	(Rasse_ID INTEGER NOT NULL,
+	(Rasse_ID INTEGER identity(1,1) NOT NULL,
 	Tierart_ID INTEGER NOT NULL,
 	Rasse nvarchar(50),
 CONSTRAINT PK_Rasse PRIMARY KEY(Rasse_ID));
 
 CREATE TABLE Besitzer
-	(Besitzer_ID INTEGER NOT NULL,
+	(Besitzer_ID INTEGER identity(1,1) NOT NULL,
 	Name nvarchar(50),
 	Vorname nvarchar(50),
 	Telefon nvarchar(20),
@@ -41,31 +41,31 @@ CREATE TABLE Besitzer
 CONSTRAINT PK_Besitzer PRIMARY KEY(Besitzer_ID));
 
 CREATE TABLE Medikament
-	(Medikament_ID INTEGER NOT NULL,
+	(Medikament_ID INTEGER identity(1,1) NOT NULL,
 	Name nvarchar(50),
 	MedikamentGruppe_ID INTEGER NOT NULL,
-	Herstellen nvarchar(50),
+	Hersteller nvarchar(50),
 	Preis DECIMAL,
 	Anzahl INTEGER NOT NULL,
 CONSTRAINT PK_Medikamente PRIMARY KEY(Medikament_ID));
 
 CREATE TABLE MedikamentGruppe
-	(MedikamentGruppe_ID INTEGER NOT NULL,
+	(MedikamentGruppe_ID INTEGER identity(1,1) NOT NULL,
 	GruppeName nvarchar(50),
 CONSTRAINT PK_MedikamentGruppe PRIMARY KEY(MedikamentGruppe_ID));
 
 CREATE TABLE Behandlung
-	(Behandlung_ID INTEGER NOT NULL,
+	(Behandlung_ID INTEGER identity(1,1) NOT NULL,
 	Personal_ID INTEGER NOT NULL,
 	Termin_ID INTEGER NOT NULL,
 	Medikament_ID INTEGER NOT NULL,
 	Dauer TIME,
-	AbschlussBemerkung nvarchar(50),
-	Gewicht DECIMAL,
+	AbschlussBemerkung nvarchar(1000),
+	Gewicht float,
 CONSTRAINT PK_Behandlung PRIMARY KEY(Behandlung_ID));
 
 CREATE TABLE Termin
-	(Termin_ID INTEGER NOT NULL,
+	(Termin_ID INTEGER identity(1,1) NOT NULL,
 	Tier_ID INTEGER NOT NULL,
 	Datum DATE,
 	Medikament_ID INTEGER  NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE Termin
 CONSTRAINT PK_Termin PRIMARY KEY(Termin_ID));
 
 CREATE TABLE Beruf
-	(Beruf_ID INTEGER NOT NULL,
+	(Beruf_ID INTEGER identity(1,1) NOT NULL,
 	Name nvarchar(50),
 CONSTRAINT PK_Beruf PRIMARY KEY(Beruf_ID));
 
